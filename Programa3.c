@@ -16,9 +16,11 @@ int main ()
       veces ++;
       sum = sum + calif;
       printf("¿Deseas sumar otra? S/N\n");
-      setdebuf(stdin, NULL);  //limpia el buffer del teclado
+      setbuf(stdin, NULL);  //limpia el buffer del teclado
       scanf("%c", &op);
       getchar();
     }
     while (op == 'S'|| op == 's');
+  printf("El promedio de las calificaciones ingresadas es: %lf\n", sum/veces);
+  return 0;
 }
