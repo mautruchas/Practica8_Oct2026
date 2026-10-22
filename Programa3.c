@@ -1,0 +1,24 @@
+/*
+López Coria Mauricio
+EJEMPLO DE FOR
+*/
+#include <stdio.h>
+int main ()
+{
+  char op = 'n';
+  double sum = 0, calif = 0;
+  int veces = 0;
+  do
+    {
+      printf("\tSuma de calificaciones\n");
+      printf("Ingrese la calificación:\n");
+      scanf("%lf", &calif);
+      veces ++;
+      sum = sum + calif;
+      printf("¿Deseas sumar otra? S/N\n");
+      setdebuf(stdin, NULL);  //limpia el buffer del teclado
+      scanf("%c", &op);
+      getchar();
+    }
+    while (op == 'S'|| op == 's');
+}
